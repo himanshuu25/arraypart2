@@ -1,0 +1,136 @@
+//........................................missing number in array.........................
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[10]; // store 1 to 10
+    int asum = 0, bsum = 0;
+    int b[10] = {2, 3, 4, 1, 5, 6, 8, 9, 10}; // missing 7
+    for (int i = 0; i < 10; i++)
+    {
+        a[i] = i + 1;
+        asum += a[i];
+        bsum += b[i];
+    }
+    cout << asum - bsum;
+}
+
+//........................................missing number in array.........................
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[100]; // store 1 to 100
+    int asum = 0, bsum = 0;
+    int b[100];
+    for (int i = 0; i < 100; i++)
+    {
+        if (i + 1 == 58)
+            b[i] = 0; // missing 58
+        else
+            b[i] = i + 1;
+        a[i] = i + 1;
+        asum += a[i];
+        bsum += b[i];
+    }
+    cout << asum - bsum;
+}
+//........................................first dulicate number in array.........................
+
+#include<iostream>
+using namespace std;
+int fdup(int a[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]==a[j]){
+                return a[i];
+            }
+        }
+    }
+}
+int main(){
+    int a[]={1,2,1,2,3};
+    cout<<fdup(a,5);
+}
+//........................................last dulicate number in array.........................
+
+#include<iostream>
+using namespace std;
+int fdup(int a[],int n){
+    int c;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]==a[j]){
+                c=a[i];
+            }
+        }
+    }
+    return c;
+}
+int main(){
+    int a[]={1,2,1,2,3,3};
+    cout<<fdup(a,6);
+}
+
+// ..........................display only duplicate element.....................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int  a[]={1,2,3,4,5,2,3};
+    for(int i=0;i<7;i++){
+        int count=0;
+        for(int j=i+1;j<7;j++){
+                if(a[i]==a[j]){
+                    count++;
+                }
+            
+        }
+        if(count){
+            cout<<"the duplicate element is :-"<<a[i];
+        }
+    }
+}
+
+//..........................remove duplicate element in the array...........................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int  a[]={1,2,3,4,5,2,3,4};
+    for(int i=0;i<8;i++){
+        int count=0;
+        for(int j=i+1;j<8;j++){
+                if(a[i]==a[j]){
+                    count++;
+                }
+            
+        }
+        if(count==0){
+            cout<<a[i];
+        }
+    }
+}
+
+//.............................find which number is missing in second element....................
+#include<iostream>
+using namespace std;
+int main(){
+    int  a[]={1,2,3,4,5},b[]={2,3,7,0,5};
+    cout<<"mising element in second array ";
+    for(int i=0;i<5;i++){
+        int count=0;
+        for(int j=0;j<5;j++){
+                if(a[i]==b[j]){
+                    count++;
+                }
+            
+        }
+        if(count==0){
+            cout<<a[i];
+        }
+    }
+
+}
+
